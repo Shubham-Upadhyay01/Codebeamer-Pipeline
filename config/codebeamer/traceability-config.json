@@ -1,7 +1,7 @@
 {
   "codebeamer": {
     "server": {
-      "url": "https://your-codebeamer-instance.com",
+      "url": "https://www.sandbox.codebeamer.plm.philips.com/cb/project/MTP1/repositories",
       "api_version": "v3",
       "timeout": 30000
     },
@@ -10,7 +10,7 @@
       "token_env_var": "CODEBEAMER_API_TOKEN"
     },
     "project": {
-      "id": "YOUR_PROJECT_ID",
+      "id": "68",
       "name": "Agile DHF Project"
     }
   },
