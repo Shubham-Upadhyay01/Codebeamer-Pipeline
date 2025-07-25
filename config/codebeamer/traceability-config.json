@@ -17,7 +17,7 @@
   "traceability": {
     "requirement_types": {
       "URS": {
-        "tracker_id": #140580,
+        "tracker_id": 140580,
         "prefix": "URS_",
         "description": "User Requirements Specification"
       },
