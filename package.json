@@ -1,0 +1,50 @@
+{
+  "name": "agile-dhf-feature-files",
+  "version": "1.0.0",
+  "description": "Feature files for Agile DHF with Codebeamer integration and traceability support",
+  "main": "index.js",
+  "scripts": {
+    "test": "cucumber-js features/**/*.feature",
+    "test:smoke": "cucumber-js features/**/*.feature --tags @smoke",
+    "test:regression": "cucumber-js features/**/*.feature --tags @regression",
+    "test:critical": "cucumber-js features/**/*.feature --tags @critical",
+    "test:compliance": "cucumber-js features/**/*.feature --tags @compliance",
+    "test:api": "cucumber-js features/**/*.feature --tags @api",
+    "test:ui": "cucumber-js features/**/*.feature --tags @ui",
+    "test:integration": "cucumber-js features/**/*.feature --tags @integration",
+    "docs:traceability": "node scripts/generate-traceability-matrix.js",
+    "docs:reports": "node scripts/generate-test-reports.js",
+    "codebeamer:sync": "node scripts/sync-with-codebeamer.js",
+    "validate:features": "node scripts/validate-feature-files.js",
+    "lint:features": "gherkin-lint features/**/*.feature"
+  },
+  "keywords": [
+    "agile-dhf",
+    "codebeamer",
+    "traceability",
+    "medical-device",
+    "bdd",
+    "gherkin",
+    "cucumber",
+    "regulatory-compliance"
+  ],
+  "author": "Your Organization",
+  "license": "MIT",
+  "devDependencies": {
+    "@cucumber/cucumber": "^10.0.0",
+    "cucumber-html-reporter": "^5.5.0",
+    "gherkin-lint": "^4.2.4",
+    "axios": "^1.6.0",
+    "fs-extra": "^11.0.0",
+    "chalk": "^4.1.2",
+    "yargs": "^17.7.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Shubham-Upadhyay01/Codebeamer-Pipeline.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Shubham-Upadhyay01/Codebeamer-Pipeline/issues"
+  },
+  "homepage": "https://github.com/Shubham-Upadhyay01/Codebeamer-Pipeline#readme"
+}

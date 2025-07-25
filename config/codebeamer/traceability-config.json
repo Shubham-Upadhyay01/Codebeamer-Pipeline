@@ -1,0 +1,78 @@
+{
+  "codebeamer": {
+    "server": {
+      "url": "https://your-codebeamer-instance.com",
+      "api_version": "v3",
+      "timeout": 30000
+    },
+    "authentication": {
+      "type": "token",
+      "token_env_var": "CODEBEAMER_API_TOKEN"
+    },
+    "project": {
+      "id": "YOUR_PROJECT_ID",
+      "name": "Agile DHF Project"
+    }
+  },
+  "traceability": {
+    "requirement_types": {
+      "URS": {
+        "tracker_id": 1001,
+        "prefix": "URS_",
+        "description": "User Requirements Specification"
+      },
+      "CMT": {
+        "tracker_id": 1002,
+        "prefix": "CMT_",
+        "description": "Component/Module Test"
+      },
+      "MANUAL": {
+        "tracker_id": 1003,
+        "prefix": "MANUAL_",
+        "description": "Manual Procedures"
+      },
+      "NFR": {
+        "tracker_id": 1004,
+        "prefix": "NFR_",
+        "description": "Non-Functional Requirements"
+      }
+    },
+    "test_execution": {
+      "tracker_id": 2001,
+      "result_mapping": {
+        "passed": "Passed",
+        "failed": "Failed",
+        "skipped": "Skipped",
+        "pending": "Not Executed"
+      }
+    }
+  },
+  "feature_files": {
+    "scan_directories": [
+      "features/**/*.feature"
+    ],
+    "tag_mapping": {
+      "@critical": "High",
+      "@regression": "Regression",
+      "@smoke": "Smoke",
+      "@integration": "Integration",
+      "@compliance": "Compliance",
+      "@security": "Security",
+      "@performance": "Performance",
+      "@ui": "User Interface",
+      "@api": "API"
+    }
+  },
+  "reporting": {
+    "formats": ["html", "json", "xml"],
+    "output_directory": "reports/traceability",
+    "include_coverage": true,
+    "include_metrics": true
+  },
+  "automation": {
+    "sync_on_commit": true,
+    "update_test_results": true,
+    "generate_reports": true,
+    "notify_stakeholders": true
+  }
+}
